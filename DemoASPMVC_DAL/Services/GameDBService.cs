@@ -52,6 +52,19 @@ namespace DemoASPMVC_DAL.Services
 
         public bool Delete(int id)
         {
+            // Delete game from fav table
+            using(SqlCommand cmd = _connection.CreateCommand()) {
+
+                cmd.CommandText = "Delete from Favoris where IdGame = @id";
+
+                cmd.Parameters.AddWithValue( "id", id );
+
+                _connection.Open();
+                cmd.ExecuteNonQuery();
+                _connection.Close();
+            }
+
+            // Then delete game
             using (SqlCommand cmd = _connection.CreateCommand())
             {
                 string sql = "DELETE FROM Game WHERE Id = @id";

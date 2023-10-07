@@ -1,5 +1,6 @@
 ﻿using DemoASPMVC_DAL.Interface;
 using DemoASPMVC_DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +30,7 @@ namespace DemoAPI.Controllers {
         }
 
         [HttpPost]
+        [Authorize( "AdminPolicy" )]
         public IActionResult CreateGenre(Genre genre) {
 
             if( _genreService.Add( genre.Label ) )

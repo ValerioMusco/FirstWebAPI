@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>GameDb</Name>
+    <Name>GameDB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{0e673977-85de-42da-acd9-b52303768a86}</ProjectGuid>
@@ -70,12 +70,12 @@
     <Build Include="Tables\Favoris.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GameDb.publish.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="GameDb.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GameDB.publish.xml" />
   </ItemGroup>
 </Project>

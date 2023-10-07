@@ -2,6 +2,7 @@
 using DemoASPMVC_DAL.Models;
 using DemoASPMVC_DAL.Models.Form;
 using DemoASPMVC_DAL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,6 +38,7 @@ namespace DemoAPI.Controllers {
         }
 
         [HttpPost]
+        [Authorize("AdminPolicy")]
         public IActionResult Create(GameForm game) {
 
             if(_gameService.Create(game))
@@ -45,6 +47,7 @@ namespace DemoAPI.Controllers {
         }
 
         [HttpDelete]
+        [Authorize("AdminPolicy")]
         public IActionResult Delete(int id) {
 
             if( _gameService.Delete( id ) )

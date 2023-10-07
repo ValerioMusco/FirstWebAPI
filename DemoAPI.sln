@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoAPI", "DemoAPI\DemoAPI.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoASPMVC_DAL", "DemoASPMVC_DAL\DemoASPMVC_DAL.csproj", "{D9735A0F-D12F-48C6-B396-26D135B63B86}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GameDb", "GameDb\GameDb.sqlproj", "{0E673977-85DE-42DA-ACD9-B52303768A86}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GameDB", "GameDB\GameDB.sqlproj", "{0E673977-85DE-42DA-ACD9-B52303768A86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
